@@ -1,4 +1,4 @@
-var urlBasePaciente = "/api/Paciente";
+var urlBasePaciente = "/api/pacientes";
 
 var consultarPaciente = function(){
     $.ajax({

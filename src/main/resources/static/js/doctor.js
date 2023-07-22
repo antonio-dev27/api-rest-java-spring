@@ -1,5 +1,5 @@
-var urlBaseDoctor = "/api/Doctor";
-var urlBaseEspecialidad = "/api/Especialidad";
+var urlBaseDoctor = "/api/doctores";
+var urlBaseEspecialidad = "/api/especialidades";
 
 var consultarEspecialidad  = function (idespecialidad) {
     $.ajax({
@@ -84,17 +84,17 @@ var actualizarTabla = function (items) {
 
     for (var i = 0; i < items.length; i++) {
         tabla += `<tr>
-                   <td>${items[i].id}</td>
+                   <td>${items[i].id_doctor}</td>
                    <td>${items[i].nombre}</td>
                    <td>${items[i].apellido}</td>
                    <td>${items[i].consultorio}</td>
                    <td>${items[i].email}</td>
                    <td>${items[i].especialidad}</td>
                    <td>
-                    <button type="button" class="btn btn-sm btn-success" onclick="editar(${items[i].id}, '${items[i].nombre}', '${items[i].apellido}', '${items[i].consultorio}','${items[i].email} ${items[i].especialidad})">
+                    <button type="button" class="btn btn-sm btn-success" onclick="editar(${items[i].id_doctor}, '${items[i].nombre}', '${items[i].apellido}', '${items[i].consultorio}','${items[i].email} ${items[i].especialidad})">
                         Editar
                     </button>
-                    <button type="button" class="btn btn-sm btn-danger" onclick="eliminar(${items[i].id})">
+                    <button type="button" class="btn btn-sm btn-danger" onclick="eliminar(${items[i].id_doctor})">
                         Eliminar
                     </button>
                    </td>

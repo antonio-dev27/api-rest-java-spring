@@ -1,4 +1,4 @@
-var urlBaseEspecialidad = "/api/Especialidad";
+var urlBaseEspecialidad = "/api/especialidades";
 
 var consultarEspecialidad = function(){
     $.ajax({
