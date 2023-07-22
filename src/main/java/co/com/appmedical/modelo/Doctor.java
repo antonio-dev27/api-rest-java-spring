@@ -25,7 +25,7 @@ import javax.persistence.Table;
 public class Doctor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ID;
+    private Integer id_doctor;
     private String nombre;
     private String apellido;
     private String consultorio;
@@ -39,16 +39,16 @@ public class Doctor {
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "doctor")
     @JsonIgnoreProperties({"doctor"})
     private List<Cita> citas;
+  
     
-   
     
-//    Metodos getters and setters     
-    public Integer getID() {
-        return ID;
+    public Integer getId_doctor() {
+        return id_doctor;
     }
 
-    public void setID(Integer ID) {
-        this.ID = ID;
+//    Metodos getters and setters
+    public void setId_doctor(Integer id_doctor) {
+        this.id_doctor = id_doctor;
     }
 
     public String getNombre() {

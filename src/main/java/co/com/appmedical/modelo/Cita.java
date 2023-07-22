@@ -24,33 +24,33 @@ import javax.persistence.Table;
 public class Cita  implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer id_cita;
     private Date fechaInicio;
     private Date fechaFinal;
     
     @ManyToOne
-    @JoinColumn(name = "doctor_id")
+    @JoinColumn(name = "id_doctor") 
     @JsonIgnoreProperties("citas")
     private Doctor doctor;
-    
+
     @ManyToOne
-    @JoinColumn(name = "paciente_id")
+    @JoinColumn(name = "id_paciente") 
     @JsonIgnoreProperties({"citas"})
     private Paciente paciente;
-    
+
     @ManyToOne
-    @JoinColumn(name = "especialidad_id")
+    @JoinColumn(name = "id_especialidad") 
     @JsonIgnoreProperties({"citas"})
     private Especialidad especialidad;
     
     
-   
-    public Integer getId() {
-        return id;
+
+    public Integer getId_cita() {
+        return id_cita;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setId_cita(Integer id_cita) {
+        this.id_cita = id_cita;
     }
 
     public Date getFechaInicio() {
@@ -91,6 +91,5 @@ public class Cita  implements Serializable {
 
     public void setEspecialidad(Especialidad especialidad) {
         this.especialidad = especialidad;
-    }
-     
+    }     
 }
