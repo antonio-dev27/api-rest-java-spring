@@ -33,13 +33,13 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="especialidad.html">Especialidades</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="doctor.html">Doctores</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="paciente.html">Pacientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="especialidad.html">Especialidades</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="cita.html">Citas</a>
@@ -83,21 +83,26 @@
                                 <div class="col-sm-12 col-lg-6">
                                     <label for="fechaFin" class="form-label">Fecha Final</label>
                                     <input type="date" class="form-control" id="fechaFin" placeholder="Fecha Final de la Reserva">
-                                </div>
-                                
-                                <div class="col-sm-12 col-lg-6">
-                                    <label for="doctor" class="form-label">Doctor</label>
-                                    <div id="doctor-select"></div>
-                                </div>
-                                <div class="col-sm-12 col-lg-6">
-                                    <label for="paciente" class="form-label">Paciente</label>
-                                    <div id="paciente-select"></div>
-                                </div>
+                                </div>                              
+
                                 <div class="col-sm-12 col-lg-6">
                                     <label for="especialidad" class="form-label">Especialidad</label>
-                                    <div id="especialidad-select"></div>
+                                    <select class="form-select" id="especialidad-select">
+                                    </select>
                                 </div>
 
+                                <div class="col-sm-12 col-lg-6">
+                                    <label for="doctor" class="form-label">Doctor</label>
+                                    <select class="form-select" id="doctor-select">
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-12 col-lg-6">
+                                    <label for="paciente" class="form-label">Paciente</label>
+                                    <select class="form-select" id="paciente-select">
+                                    </select>
+                                </div>
+                                
                             </div>
                         </div>
                         <div class="modal-footer">
